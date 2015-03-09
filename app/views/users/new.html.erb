@@ -1,9 +1,32 @@
-<% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<!DOCTYPE HTML>
+<html lang="en-US">
 
-<div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	<title>Vaccine Vault</title>
+	<link rel="stylesheet" href="assets/jquery.mobile-1.4.5.css" />
+	<script src="assets/jquery-2.1.3.js"></script>
+	<script src="assets/jquery.mobile-1.4.5.js"></script>
+	<link rel="stylesheet" href="assets/VaccineVault.css" />	
+</head>
+
+<body>	
+
+	
+<!--THIS SECTION CONTAINS THE LOGIN PAGE CONTENT -->
+<div data-role="page" id="reports" data-theme="a">
+	<div data-role="header" >
+		<a href="#" data-icon="home" data-iconpos="notext" data-direction="reverse">Home</a>
+		<h1 class = "less-padding"><img src="assets/logo_white_header_sized.png"></h1>
+	</div><!--END Reports HEADER SECTION --> 
+	
+
+	<div role="main" class="ui-content">	
+      <%= form_for(@user) do |f| %>
       <%= render 'shared/error_messages' %>
 
       <%= f.label :name %>
@@ -20,5 +43,29 @@
 
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
-  </div>
+		
 </div>
+<!--END LOGIN CONTENT SECTION -->
+
+	<div data-role="footer" class="nav-glyphish-example" data-theme="a" data-position="fixed">
+	     <div data-role="navbar" class="nav-glyphish-example" data-grid="b">
+	     <ul>
+	          <li><a href="#" id="myVaccines"><img src="assets/myvaccine_icon_sized.png"><br>My Vaccines</a></li>
+	          <li><a href="#" id="addNew"><img src="assets/plus_icon_sized.png"><br>Add New</a></li>
+	          <li><a href="#" id="reports"><img src="assets/report_icon_sized.png"><br>Reports</a></li>
+	     </ul>
+	     </div><!--END NAVBAR SECTION -->
+	 </div><!--END AddNewFOOTER SECTION -->
+ 
+</div><!--END AddNew PAGE -->
+			
+			
+
+
+</body>
+</html>
+
+
+
+
+
